@@ -7,8 +7,8 @@ class HomePage {
         this.cookieBannerCloseButton = page.getByRole('button', { name: 'Close' });
     }
 
-    async navigateTo(){
-        await this.page.goto("https://hacktheicon.scramblerducati.com/")
+    async navigateTo(path = '/'){
+        await this.page.goto(path)
     }
     async closeCookieBanner(){
         if(await this.cookieBannerCloseButton.isVisible()){

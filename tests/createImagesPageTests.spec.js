@@ -6,7 +6,7 @@ const { verifyImageResolution } = require('../utils/imageUtils');
 test('Verify image generation should generate 4 images', async ({ page }) => {
     const createImagesPage = new CreateImagesPage(page);
 
-    await page.goto('https://hacktheicon.scramblerducati.com/create');
+    await page.goto('/create');
     await createImagesPage.closeCookieBanner();
     await createImagesPage.verifyCreateYourScramblerHeading();
     await createImagesPage.fillDescriptionAndGenerateImage('Roger Federer skiing');
